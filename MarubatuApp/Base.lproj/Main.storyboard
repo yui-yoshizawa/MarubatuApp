@@ -50,6 +50,17 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GwK-54-xqd">
+                                <rect key="frame" x="132" y="603" width="150" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="NqJ-sh-5bS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="ヒント"/>
+                                <connections>
+                                    <action selector="ヒント:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fbp-m1-DUt"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -57,8 +68,10 @@
                             <constraint firstItem="h9P-Tn-ryE" firstAttribute="leading" secondItem="7en-Q3-MeH" secondAttribute="trailing" constant="8" id="7sb-ob-u5l"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="a5D-OG-qKZ" secondAttribute="trailing" constant="20" id="8zh-Cb-hyq"/>
                             <constraint firstItem="a5D-OG-qKZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="HlC-vb-kZf"/>
+                            <constraint firstItem="7en-Q3-MeH" firstAttribute="top" secondItem="GwK-54-xqd" secondAttribute="bottom" constant="8" id="KRG-hT-yig"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="h9P-Tn-ryE" secondAttribute="trailing" constant="20" id="NS9-Gb-a3M"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="7en-Q3-MeH" secondAttribute="bottom" constant="20" id="SSi-oQ-9My"/>
+                            <constraint firstItem="GwK-54-xqd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VLR-GQ-BCw"/>
                             <constraint firstItem="a5D-OG-qKZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="XI7-XH-xLu"/>
                             <constraint firstItem="a5D-OG-qKZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="Yiv-NH-eVi"/>
                             <constraint firstItem="a5D-OG-qKZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ZS3-Wt-ZsJ"/>
@@ -70,12 +83,13 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="maru" destination="h9P-Tn-ryE" id="eQ7-dG-edj"/>
                         <outlet property="questionLabel" destination="a5D-OG-qKZ" id="khn-Sa-goD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="272" y="124"/>
+            <point key="canvasLocation" x="269.56521739130437" y="123.88392857142857"/>
         </scene>
     </scenes>
 </document>
