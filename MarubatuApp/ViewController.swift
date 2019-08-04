@@ -77,32 +77,39 @@ class ViewController: UIViewController {
             
             // 選択された答えと問題の答えを比較する
             if yourAnswer == ans {
+                // 正解のとき
                 // currentQuestionNumを1足す
                 currentQuestionNum += 1
                 // 正解の数だけ追加
                 result.append(true)    // 要素を追加
                 
+                // 最後の問題の時
                 if currentQuestionNum >= questions.count {
                  showAlert(message: "\(questions.count)問中\(result.count)問正解しました！")
-                 isHint = false
-                    currentQuestionNum = 0
+                 isHint = false    // ヒント復活
+                    currentQuestionNum = 0    // 問題番号リセット
                 } else {
+                    // 最後の問題ではない時
                     showAlert(message: "正解！")
                 }
             
             } else {
-                // 不正解
+                // 不正解のとき
                 currentQuestionNum += 1
+                
                 if currentQuestionNum >= questions.count {
+                    // 最後の問題の時
                     showAlert(message: "\(questions.count)問中\(result.count)問正解しました！")
-                    isHint = false
-                    currentQuestionNum = 0
+                    isHint = false    // ヒント復活
+                    currentQuestionNum = 0    // 問題番号リセット
                 } else {
-                showAlert(message: "不正解...")
+                    // 最後の問題ではない時
+                    showAlert(message: "不正解...")
                 }
             }
                 
         }else{
+            // エラーをわかりやすくする
             print("答えが入ってません")
             return
         }
